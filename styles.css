@@ -227,7 +227,7 @@ img {
 @media (max-width: 768px) {
   .home__img {
     position: absolute;
-    top: 200px;
+    top: 330px;
     right: 0;
     bottom: 0;
     width: 260px;
