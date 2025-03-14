@@ -1,3 +1,25 @@
+document.addEventListener("keydown", function(event) {
+    if (
+        (event.ctrlKey || event.metaKey) &&
+        (event.key === "+" || event.key === "-" || event.key === "0")
+    ) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener("wheel", function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+document.addEventListener("touchmove", function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
