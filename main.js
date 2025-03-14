@@ -1,19 +1,20 @@
-document.addEventListener("keydown", function(event) {
-    if (
-        (event.ctrlKey || event.metaKey) &&
-        (event.key === "+" || event.key === "-" || event.key === "0")
-    ) {
+document.addEventListener("keydown", function (event) {
+    if ((event.ctrlKey || event.metaKey) && ["+", "-", "0"].includes(event.key)) {
         event.preventDefault();
     }
 });
 
-document.addEventListener("wheel", function(event) {
+document.addEventListener("wheel", function (event) {
     if (event.ctrlKey) {
         event.preventDefault();
     }
 }, { passive: false });
 
-document.addEventListener("touchmove", function(event) {
+document.addEventListener("gesturestart", function (event) {
+    event.preventDefault();
+}); 
+
+document.addEventListener("touchmove", function (event) {
     if (event.touches.length > 1) {
         event.preventDefault();
     }
