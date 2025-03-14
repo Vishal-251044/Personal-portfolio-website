@@ -225,26 +225,6 @@ img {
   width: 360px;
 }
 
-@media (max-width: 768px) {
-  .home__img {
-    position: absolute;
-    top: 200px;
-    right: 0;
-    bottom: 0;
-    width: 260px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 260px;
-  }
-}
-
-
 /*BUTTONS*/
 .button {
   display: inline-block;
