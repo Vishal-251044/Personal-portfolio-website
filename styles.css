@@ -129,7 +129,7 @@ img {
     position: fixed;
     top: 4rem;
     right: -100%;
-    width: 60%;
+    width: 55%;
     height: 100%;
     padding: 2rem;
     background-color: rgb(92, 102, 141);
@@ -213,6 +213,7 @@ img {
 }
 .home__img {
   position: absolute;
+  top: 90px;
   right: 0;
   bottom: 0;
   width: 260px;
@@ -222,8 +223,27 @@ img {
 }
 .home__blob-img {
   width: 360px;
-  
 }
+
+@media (max-width: 768px) {
+  .home__img {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    bottom: 0;
+    width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 260px;
+  }
+}
+
 
 /*BUTTONS*/
 .button {
