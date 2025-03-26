@@ -91,3 +91,26 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     document.getElementById('contactForm').reset();
 });
+
+document.addEventListener("DOMContentLoaded", async function () {
+    const homeImg = document.querySelector(".home__img");
+
+    if (homeImg) {
+        let isBrave = false;
+
+        if (navigator.brave) {
+            isBrave = await navigator.brave.isBrave();
+        } else if (navigator.userAgent.includes("Brave")) {
+            isBrave = true;
+        }
+
+        if (window.innerWidth <= 768) {
+            if (isBrave) {
+                homeImg.style.top = "50vh"; 
+            } else if (navigator.userAgent.toLowerCase().includes("chrome")) {
+                homeImg.style.top = "40vh"; 
+            }
+        }
+    }
+});
+
