@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         if (window.innerWidth <= 768) {
             if (isBrave) {
-                homeImg.style.top = "50vh"; 
+                homeImg.style.top = "45vh"; 
             } else if (navigator.userAgent.toLowerCase().includes("chrome")) {
                 homeImg.style.top = "40vh"; 
             }
